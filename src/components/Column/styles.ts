@@ -3,5 +3,6 @@ import styled from 'styled-components';
 export const ColumnContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* Adicione mais estilos aqui conforme necessário */
+  padding: 0px 5px;
+  width: 100%;
 `;

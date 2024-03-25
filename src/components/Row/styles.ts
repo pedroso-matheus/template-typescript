@@ -5,5 +5,6 @@ export const RowContainer = styled.div<IRowStyled>`
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: ${props => props.justify || 'flex-start'};
+  padding: 10px 0px;
+  justify-content: ${props => props.$justify || 'flex-start'};
 `;

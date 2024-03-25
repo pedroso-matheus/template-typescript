@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-export const StyledMainContainer = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; // Assegura que padding e border estão incluídos na largura e altura total
+export const StyledMainContainer = styled.div`    
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;

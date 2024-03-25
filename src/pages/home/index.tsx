@@ -1,35 +1,69 @@
 import React from 'react';
 
-import MainContainer from '../../components/MainContainer';
 import Wrapper from '../../components/Wrapper';
-import DataTable from '../../components/DataTable';
+import Button from '../../components/Button';
+import Header from '../../components/Header';
+import Row from '../../components/Row';
+import { DataTable } from '../../components/DataTable';
+
+import { columns } from '../../components/Payments/Columns';
 
 const Home = () => {
 
-  // Exemplo de dados dos usuários
-  const users = [
-    { id: 1, name: "Alice", email: "alice@example.com" },
-    { id: 2, name: "Bob", email: "bob@example.com" },
-    { id: 3, name: "Charlie", email: "charlie@example.com" },
-  ];
-
-  // Configuração das colunas para o DataTable
-  const columns = [
-    { key: 'id', title: 'ID' },
-    { key: 'name', title: 'Name' },
-    { key: 'email', title: 'Email', render: (row: any) => <a href={`mailto:${row.email}`}>{row.email}</a> },
-  ];
+  type Payment = {
+    id: string
+    amount: number
+    status: "pending" | "processing" | "success" | "failed"
+    email: string
+  }
+  
+  const payments: Payment[] = [
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "c@gmail.com",
+    },
+    {
+      id: "5465456",
+      amount: 125,
+      status: "processing",
+      email: "b@gmail.com",
+    },
+    {
+      id: "64445",
+      amount: 300,
+      status: "success",
+      email: "a@gmail.com",
+    },    
+    {
+      id: "554564",
+      amount: 300,
+      status: "success",
+      email: "d@gmail.com",
+    },        
+    {
+      id: "489e1d42",
+      amount: -2,
+      status: "pending",
+      email: "f@gmail.com",
+    },        
+  ]
 
   return (
-    <MainContainer>
-      <Wrapper padding={"30px"}>        
-          <h1>Home</h1>
-          <p>Ir para Login</p>        
-      </Wrapper>
+    <>
+      <Header title={"TEMPLATE"} />
       <Wrapper padding={"30px"}>
-        <DataTable columns={columns} data={users} /> 
+        <Row justify={"space-between"}>                        
+            <Button label={"Botão"} href={'/login'} />
+            <Button backgroundColor={"#ff0000"} color={'#00ff00'} borderColor={'#000fff'} />
+            <Button backgroundColor={"#ff0000"} color={'#00ff00'}  />
+        </Row>
       </Wrapper>
-    </MainContainer>
+      <Wrapper padding={"30px"}>        
+          <DataTable columns={columns} data={payments} />      
+      </Wrapper>
+    </>
   );
 };
 

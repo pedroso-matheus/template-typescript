@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface IRowStyled {
-    justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
+    $justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
   }
 
 export interface IRow {

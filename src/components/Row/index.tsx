@@ -4,7 +4,7 @@ import { RowContainer } from './styles';
 import { IRow } from './types';
 
 const Row = ({ children, justify }: IRow) => {
-  return <RowContainer justify={ justify } >{children}</RowContainer>;
+  return <RowContainer $justify={ justify } >{children}</RowContainer>;
 
 };
 

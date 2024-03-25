@@ -1,15 +1,6 @@
-export interface IColumn {
-    key: string;
-    title: string;
-    render?: (row: any) => JSX.Element;
+import { ColumnDef } from "@tanstack/react-table";
+
+export interface DataTableProps<TData, TValue> {
+    columns: ColumnDef<TData, TValue>[]
+    data: TData[]
   }
-  
-  export interface IDataTableProps {
-    columns: IColumn[];
-    data: any[];
-    onSort?: (key: string, order: 'asc' | 'desc') => void;
-    onSearch?: (query: string) => void;
-    onPageChange?: (pageNumber: number) => void;
-    pageSize?: number;
-  }
-  

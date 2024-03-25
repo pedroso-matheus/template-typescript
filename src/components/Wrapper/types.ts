@@ -1,8 +1,8 @@
 import React from 'react';
 
 export interface IWrapperStyled {
-  padding?: string;
-  margin?: string;
+  $padding?: string;
+  $margin?: string;
 }
 
 export interface IWrapper {
