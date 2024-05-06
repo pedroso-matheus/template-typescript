@@ -6,7 +6,7 @@ export const NavbarContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 10px 60px;
-  background-color: #2d5176;
+  background-color: #222;
   color: #fff;
 
   @media (max-width: 768px) {

@@ -8,21 +8,21 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    background-color: #00172f;
+    background-color: #fff;
   }
 
   h1{
-    color: #daebfd;
+    color: #222;
     font-size: 25px;
   }
 
   h2{
-    color: #daebfd;
+    color: #222;
     font-size: 22x;    
   }
 
   p, span, div, td, a {
-    color: #daebfd;
+    color: #222;
     font-size: 16px;    
   }
 

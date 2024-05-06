@@ -11,7 +11,7 @@ export const Logo = styled.img`
 //background-image: linear-gradient(to bottom, #2d5176, black);
 
 export const FooterContainer = styled.footer`
-  background-color: #2d5176;
+  background-color: #fff;
   text-align: center;
   padding: 40px 10px;
   margin-top: 20px;

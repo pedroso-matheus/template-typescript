@@ -13,28 +13,53 @@ export type Payment = {
 
 export const columns: ColumnDef<Payment>[] = [
   {
-    accessorKey: "status",
+    accessorKey: "nome",
     header: ({ column }) => {
       return (
         <span
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Status <ArrowUpDown className="h-2 w-2" />
+          Nome <ArrowUpDown className="h-2 w-2" />
         </span>
       )
     },  },
   {
-    accessorKey: "email",
+    accessorKey: "preco",
     header: ({ column }) => {
       return (
         <span
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Emaillll <ArrowUpDown className="h-40 w-40" />
+          Preço <ArrowUpDown className="h-40 w-40" />
         </span>
       )
     },
   },
+  {
+    accessorKey: "MarketCap",
+    header: ({ column }) => {
+      return (
+        <span
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          MarketCap <ArrowUpDown className="h-40 w-40" />
+        </span>
+      )
+    },
+  },
+  {
+    accessorKey: "period",
+    header: ({ column }) => {
+      return (
+        <span
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          % no Periodo <ArrowUpDown className="h-40 w-40" />
+        </span>
+      )
+    },
+  },
+  /*
   {
     accessorKey: "amount",
     header: ({ column }) => {
@@ -83,5 +108,6 @@ export const columns: ColumnDef<Payment>[] = [
       return valueAsString.includes(filterValueString);
     },
   }
+  */
 ]
 
